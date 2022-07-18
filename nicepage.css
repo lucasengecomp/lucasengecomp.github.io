@@ -1175,6 +1175,9 @@ a {
 }
 .u-image.u-logo img {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 .u-form-horizontal {
   display: flex;
@@ -5897,6 +5900,7 @@ section.u-image:not(.u-hover-box),
 }
 .u-valign-top {
   justify-content: flex-start;
+  margin: 44px 160px 10px calc((100% - 980px) * 0.5);
 }
 @media (min-width: 1400px) {
   .u-valign-top-xxl {
@@ -36639,7 +36643,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-image-1 {
-  width: 64px;
+  width: 100px;
   height: 32px;
   margin: 22px auto 0 0;
 }
