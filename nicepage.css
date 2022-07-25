@@ -5899,8 +5899,9 @@ section.u-image:not(.u-hover-box),
   }
 }
 .u-valign-top {
+  width: 90%;
+  margin: auto;
   justify-content: flex-start;
-  margin: 44px 160px 10px calc((100% - 980px) * 0.5);
 }
 @media (min-width: 1400px) {
   .u-valign-top-xxl {
