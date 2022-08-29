@@ -160,12 +160,34 @@ p{
 }
 
 @media screen and (max-width: 500px){
+
     nav ul{
-        display: none;
+        display: block;
+        position: absolute;
+        background: orange;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        z-index: 112;
+        padding-right: 28px;
+        padding-top: 20px;
+        font-size: 1.8em;
+        top: 100%;
+        transition: 500ms right;
+    }
+
+    .menu-open nav ul{
+        right: 0;
+    }
+
+    nav ul li{
+        display: block;
+        margin-left: 30px !important;
     }
 
     article{
         width: 100% !important;
+        padding: 30px;
     }
 
     aside{
@@ -183,6 +205,67 @@ p{
         background: white;
         margin: 5px;
     }
+
+    .artifact{
+        left: 20% !important;
+        width: 80%;
+    }
+
+    .whiteboard{
+        width: 100%;
+        /*margin-left: 5%;*/
+    }
+
+    .whiteboard.one{
+        border-radius: 0;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
+    .whiteboard.three{
+        border-radius: 0;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .person{
+        width: 46% !important;
+        margin: 0 !important;
+    }
+
+    .person .picture{
+        width: 34vw !important;
+        height: 34vw !important;
+        /*max-width: 200px;*/
+    }
+
+    article.full{
+        padding-bottom: 0 !important;
+    }
+
+}
+
+.person{
+    vertical-align: top;
+}
+
+.person .picture{
+    width: 23vw;
+    height: 23vw;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 100px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    vertical-align: top;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
 }
 
 .mobile-menu{

@@ -17,17 +17,16 @@
 		<img src="res/img/logo.png" class="logo" width="50">
 
 		<ul>
-			<li class="home"><a href="#">Inicio</a></li>
-			<li><a href="#business-model">Modelo de negócios</a></li>
+			<li onclick="Menu.close()" class="home"><a href="#">Inicio</a></li>
+			<li onclick="Menu.close()"><a href="#business-model">Modelo de negócios</a></li>
 			<li><a href="https://docs.google.com/document/d/14uD0Pl5KZl64lyAUctix9AmB5NDu1h1qKMsXTBmNqg8/edit" target="_blank">Regulamento</a></li>
-			<li><a href="#desafio">Desafio</a></li>
-			<li><a href="#mentores">Mentores</a></li>
-			<li><a href="#parceiros">Parceiros</a></li>
-			<li><a href="#faq">FAQ</a></li>
-
+			<li onclick="Menu.close()"><a href="#desafio">Desafio</a></li>
+			<li onclick="Menu.close()"><a href="#mentores">Mentores</a></li>
+			<li onclick="Menu.close()"><a href="#parceiros">Parceiros</a></li>
+			<li onclick="Menu.close()"><a href="#faq">FAQ</a></li>
 		</ul>
 
-		<div class="mobile-menu">
+		<div class="mobile-menu" onclick="Menu.toggle()">
 			<div class="bar"></div>
 			<div class="bar"></div>
 			<div class="bar"></div>
@@ -59,8 +58,6 @@
 				<h2>Por que fazer o hacktown</h2>
 
 				<p>O Hackaton surge com o desafio principal de planejar como deve ser a Editora Cidade Nova do futuro, pois queremos ampliar o escopo de atuação da editora tanto em formatos de conteúdo como no público-alvo a ser atingido. Atualmente, temos um público-alvo mais focado na própria comunidade do Movimento dos Focolares, mas esse conteúdo precisa chegar com mais agilidade a toda a sociedade, pois se trata de um conteúdo relevante e necessário para os desafios atuais. Para engajar os jovens nesse desafio, pretendemos realizar um Hackaton que nos traga soluções para darmos passos importantes, de modo que a Editora Cidade Nova do futuro esteja mais adequada aos desafios do mercado editorial em constante mutação.</p>
-
-				<p>Estamos utilizando essa metodologia de inovação aberta através do Hackaton, para que possamos ter uma visão aberta, que possibilita que os jovens universitários engajados em nossos propósitos, também sejam protagonistas do futuro da Editora Cidade Nova, pois entendemos que são pessoas que  podem contribuir para encontrarmos soluções para os nossos principais desafios, visto que somos uma Organização sem fins lucrativos e nossa situação financeira é positiva e estável, mas é frágil. Para colocar essa etapa importante do nosso planejamento estratégico contamos com a participação desses jovens engajados nessas causas.</p>
 
 			</div>
 
@@ -120,7 +117,9 @@
 
 	</aside>
 
-	<article class="full" id="business-model">
+	<a class="anchor" id="business-model"></a>
+
+	<article class="full">
 
 		<h2>Modelo de Negócios</h2>
 
@@ -152,10 +151,11 @@
 
 	<article class="full">
 
+		<a class="anchor" id="desafio"></a>
 
 		<br>
 
-		<h2 id="desafio">Desafios</h2>
+		<h2>Desafio</h2>
 
 		<p>O Hackaton Cidade Nova 2022 surge do desafio principal de planejar como deve ser a Editora Cidade Nova do futuro, pois queremos ampliar o escopo de atuação da editora tanto em formatos de conteúdo como no público alvo a ser atingido. Atualmente, temos um público-alvo mais focado na própria comunidade do Movimento dos Focolares, mas esse conteúdo precisa chegar com mais agilidade a toda a sociedade, pois se trata de um conteúdo relevante e necessário para os tempos atuais. Para podermos contar com você, jovem, nesse desafio, pretendemos realizar esse evento, a fim de que possa trazer ideias inovadoras e soluções para que a Editora Cidade Nova do futuro esteja mais preparada aos desafios do mercado editorial em constante mutação.</p>
 
@@ -178,40 +178,71 @@
 
 	</article>
 
-	<article class="persons" id="mentores">
+	<a class="anchor" id="mentores"></a>
+
+	<article class="persons">
 
 		<h2>Mentores</h2>
 
 		<div class="person">
-			<picture>
-				<img src="res/img/mentores/mentor_soleman.png">
-				<p>Soleiman Dias</p>
-				<small>Mestre em Educação Internacional nos EUA, PhD em Relações Internacionais com especialização em EStudos Coreanos pela Universidade de Hanyang na Coreia do Sul, Diretor de Relações Internacionais da Chadwick International</small>
-			</picture>
+			<div class="picture" style="background-image: url(res/img/mentores/aline_muniz.jpeg);">
+			</div>
+			<p>Aline Muniz</p>
+			<small></small>
 		</div>
-
 		<div class="person">
-			<picture>
-				<img src="res/img/mentores/mentor_soleman.png">
-				<p>Soleiman Dias</p>
-				<small>Mestre em Educação Internacional nos EUA, PhD em Relações Internacionais com especialização em EStudos Coreanos pela Universidade de Hanyang na Coreia do Sul, Diretor de Relações Internacionais da Chadwick International</small>
-			</picture>
+			<div class="picture" style="background-image: url(res/img/mentores/diego_macedo.jpeg);">
+			</div>
+			<p>Diego Macedo</p>
+			<small></small>
 		</div>
-
 		<div class="person">
-			<picture>
-				<img src="res/img/mentores/mentor_soleman.png">
-				<p>Soleiman Dias</p>
-				<small>Mestre em Educação Internacional nos EUA, PhD em Relações Internacionais com especialização em EStudos Coreanos pela Universidade de Hanyang na Coreia do Sul, Diretor de Relações Internacionais da Chadwick International</small>
-			</picture>
+			<div class="picture" style="background-image: url(res/img/mentores/fernanda_oliveira_da_silva.jpeg);">
+			</div>
+			<p>Fernanda Oliveira Da Silva</p>
+			<small></small>
 		</div>
-
 		<div class="person">
-			<picture>
-				<img src="res/img/mentores/mentor_soleman.png">
-				<p>Soleiman Dias</p>
-				<small>Mestre em Educação Internacional nos EUA, PhD em Relações Internacionais com especialização em EStudos Coreanos pela Universidade de Hanyang na Coreia do Sul, Diretor de Relações Internacionais da Chadwick International</small>
-			</picture>
+			<div class="picture" style="background-image: url(res/img/mentores/marcelo_gluz.jpeg);">
+			</div>
+			<p>Marcelo Gluz</p>
+			<small></small>
+		</div>
+		<div class="person">
+			<div class="picture" style="background-image: url(res/img/mentores/mariana_assis.jpeg);">
+			</div>
+			<p>Mariana Assis</p>
+			<small></small>
+		</div>
+		<div class="person">
+			<div class="picture" style="background-image: url(res/img/mentores/maria_helena.jpeg);">
+			</div>
+			<p>Maria Helena</p>
+			<small></small>
+		</div>
+		<div class="person">
+			<div class="picture" style="background-image: url(res/img/mentores/ricardo_tavares.jpeg);">
+			</div>
+			<p>Ricardo Tavares</p>
+			<small></small>
+		</div>
+		<div class="person">
+			<div class="picture" style="background-image: url(res/img/mentores/soleiman_dias.jpeg);">
+			</div>
+			<p>Soleiman Dias</p>
+			<small></small>
+		</div>
+		<div class="person">
+			<div class="picture" style="background-image: url(res/img/mentores/thiago_sano.jpeg);">
+			</div>
+			<p>Thiago Sano</p>
+			<small></small>
+		</div>
+		<div class="person">
+			<div class="picture" style="background-image: url(res/img/mentores/valeria_lapa.jpeg);">
+			</div>
+			<p>Valeria Lapa</p>
+			<small></small>
 		</div>
 
 	</article>
@@ -221,7 +252,9 @@
 	<br>
 	<br>
 
-	<article class="persons" id="parceiros">
+	<a class="anchor" id="parceiros"></a>
+
+	<article class="persons">
 
 		<h2>Parceiros</h2>
 
@@ -264,6 +297,7 @@
 <script type="text/javascript" src="res/js/jquery.js"></script>
 <script type="text/javascript" src="res/js/slider.js"></script>
 <script type="text/javascript" src="res/js/default.js"></script>
+<script type="text/javascript" src="res/js/menu.js"></script>
 <script type="text/javascript">
 	
 Slider.start($('.body .slider'), $('.body .slider .slide'), $('.slider-btns'));
