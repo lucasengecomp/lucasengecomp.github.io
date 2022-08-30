@@ -317,4 +317,9 @@ a.anchor {
 .person small{
     text-align: justify;
     display: inline-block;
+    margin-top: -15px;
+}
+
+.calendar-dates p{
+    text-align: center;
 }
