@@ -54,9 +54,7 @@
 					<img src="res/img/header.png">
 				</picture>
 
-			</div>
-
-			<div class="slide">
+			</div><div class="slide">
 
 				<h2>Datas</h2>
 
@@ -76,9 +74,7 @@
 <!-- 
 				<p>O Hackaton surge com o desafio principal de planejar como deve ser a Editora Cidade Nova do futuro, pois queremos ampliar o escopo de atuação da editora tanto em formatos de conteúdo como no público-alvo a ser atingido. Atualmente, temos um público-alvo mais focado na própria comunidade do Movimento dos Focolares, mas esse conteúdo precisa chegar com mais agilidade a toda a sociedade, pois se trata de um conteúdo relevante e necessário para os desafios atuais. Para engajar os jovens nesse desafio, pretendemos realizar um Hackaton que nos traga soluções para darmos passos importantes, de modo que a Editora Cidade Nova do futuro esteja mais adequada aos desafios do mercado editorial em constante mutação.</p>
  -->
-			</div>
-
-			<div class="slide">
+			</div><div class="slide">
 
 				<iframe width="100%" height="250" src="https://www.youtube.com/embed/-Z6bzrKBftg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -86,8 +82,7 @@
 
 				<p>A Editora tem como propósito: promover a cultura da unidade e a fraternidade universal por meio de conteúdos permeados de valores humanos, que favoreçam relações autênticas e harmoniosas entre pessoas, grupos e nações. A Editora, além do portal de conteúdos, tem como produtos: revistas, livros, ebooks, podcasts, que podem ser adquiridos em nossa loja on-line, em algumas das principais lojas on-line do país, nos pontos de venda da Editora, nos diversos centros de eventos e por uma rede distribuidores em todo o país. E para ampliar a incidência dos nossos produtos e conteúdos na sociedade, fizemos também a adesão à Fundação Nuova Global, para ampliar a sinergia e o potencial da Editora no futuro.</p>
  -->
-			</div>
-			<div class="slide">
+			</div><div class="slide">
 
 				<iframe width="100%" height="250" src="https://www.youtube.com/embed/qLTywxrC5-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <!-- 
@@ -101,7 +96,7 @@
 
 		</div>
 
-		<div>
+		<div class="slider-btns-holder">
 <!-- 			<a href="#calendario"><button>Calendário</button></a> -->
 			<div class="slider-btns"></div>
 		</div>
@@ -418,11 +413,56 @@
 <script type="text/javascript" src="res/js/accordion.js"></script>
 <script type="text/javascript">
 
-$(function(){
+if($('body').width() > 500){
 
-	Slider.start($('.body .slider'), $('.body .slider .slide'), $('.slider-btns'));
+	$(function(){
 
-});
+		Slider.start($('.body .slider'), $('.body .slider .slide'), $('.slider-btns'));
+
+	});
+
+} else{
+
+	$('.body .slider .slide').each(function(){
+
+		var btn = $('<div class="slider-btn"></div>');
+
+		$('.slider-btns').append(btn);
+
+	});
+
+	$('.slider-btns .slider-btn').eq(0).addClass('visible');
+
+	Slider.helpers.snapScrollSide($('.slider'), $('.slider .slide'), function(index){
+
+		$('.slider-btns .slider-btn.visible').removeClass('visible');
+
+		$('.slider-btns .slider-btn').eq(index).addClass('visible');
+
+		console.log(index);
+
+	});
+
+}
+
+// $(function(){
+
+// 	Slider.start($('.body .slider'), $('.body .slider .slide'), $('.slider-btns'));
+
+// });
+
+// Helpers[Default.isMobile()?'snapScrollSide':'snapScrollTop']($('#skus-container .inner-container'), $('#skus-container .inner-container .sku'), index => {
+
+
+//     if(Default.isMobile()){
+//         Buying.skuIndex = index;
+//         Buying.mobileImageLoadTick();
+//         Buying.selectProduct($('#skus-container .inner-container .sku').eq(index).data().id);
+//     }
+
+
+
+// });
 
 </script>
 

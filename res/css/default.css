@@ -60,8 +60,8 @@ vhr {
 
 .header img{
     max-height: 180px;
-    margin-top: 20px;
     width: unset !important;
+    max-width: 100%;
 }
 
 .signup{

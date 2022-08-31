@@ -187,6 +187,141 @@ var Slider = {
 
 		}).then(Slider.loop);
 
+	},
+
+	helpers: {
+
+	    // Uma versão alternativa ao snapScrollLeft
+	    snapScrollSide: function(elm, divisors, f){
+
+	        var divWidth = divisors.outerWidth(true);
+
+	        var timeout = null;
+
+	        elm.off('scroll');
+	        elm.on('scroll', function(event){
+
+	            // Impede um scroll vindo do .animate
+	            if($(this).is(':animated')) return;
+
+	            clearTimeout(timeout);
+
+	            timeout = setTimeout(function(){
+
+	                var index = Math.round(elm.get(0).scrollLeft / divWidth);
+
+	                elm.animate({
+	                    scrollLeft: index * divWidth
+	                }, 100);
+
+	                f(index);
+
+	            }, 100);
+
+	        });
+
+	    },
+
+	    snapScrollTop: function(elm, divisors, f){
+
+	        var timeout = null;
+
+	        elm.off('scroll');
+	        elm.on('scroll', function(event){
+
+	            // Impede um scroll vindo do .animate
+	            if($(this).is(':animated')) return;
+
+	            clearTimeout(timeout);
+
+	            timeout = setTimeout(function(){
+
+	                var divHeight = divisors.outerHeight(true);
+	                var ratio = Math.round(elm.get(0).scrollTop / divHeight);
+
+	                elm.animate({
+	                    scrollTop: ratio * divHeight
+	                }, 200);
+
+	                f(ratio);
+
+	            }, 400);
+
+	        });
+
+	    },
+
+	    forceScroll: function (elm, divisors, next) {
+
+	        return new Promise(function (resolve) {
+
+	            var divSize = divisors.outerWidth(true);
+	            var nextPos = Math.round(elm[0].scrollLeft / divSize) * divSize + (next ? divSize : divSize * -1);
+
+	            elm.css('overflow', 'hidden');
+
+	            setTimeout(function () { elm.css('overflow', 'auto'); resolve(); }, 200);
+
+	            elm.animate({ 'scrollLeft': nextPos }, 200);
+
+	        });
+
+	    },
+
+	    instantSnap: function (elm, divisors, orientation) {
+
+	        var animateDelay = 200;
+
+	        if (typeof orientation === 'undefined') orientation = 'height';
+
+	        var scrollOrientation = 'scrollLeft';
+	        var measureFunction = 'outerWidth';
+
+	        if (orientation === 'height') {
+
+	            scrollOrientation = 'scrollTop';
+	            measureFunction = 'outerHeight';
+
+	        }
+
+	        var divSize = divisors[measureFunction](true);
+	        var ratio = Math.round(elm.get(0)[scrollOrientation] / divSize);
+
+	        elm.css('overflow', 'hidden');
+
+	        setTimeout(function () { elm.css('overflow', 'auto'); }, animateDelay);
+
+	        var objAnimate = {};
+
+	        objAnimate[scrollOrientation] = ratio * divSize;
+
+	        elm.animate(objAnimate, animateDelay);
+
+	    },
+
+	    snapScrollLeft: function(elm, divisors, animate, delay){
+
+	        var timeout = null;
+
+	        if(typeof animate === 'undefined') animate = 200;
+	        if(typeof delay   === 'undefined') delay   = 400;
+
+	        elm.off('scroll');
+
+	        elm.on('scroll', function(){
+
+	            clearTimeout(timeout);
+
+	            timeout = setTimeout(function(){
+
+	                Slider.helpers.instantSnap(elm, divisors, 'width');
+
+	            }, delay);
+
+	        });
+
+	    }
+
 	}
 
 }
