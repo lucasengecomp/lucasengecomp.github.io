@@ -48,6 +48,17 @@ button{
     vertical-align: middle;
 }
 
+vhr {
+    flex-grow: 1;
+    border-top: 2px dotted rgba(255, 255, 255, 0.3);
+    margin: 0.5em 13px;
+}
+
+.header{
+    max-height: 180px;
+    margin-top: 20px;
+}
+
 .signup{
     float: right;
     margin-top: 6px;
@@ -164,6 +175,88 @@ p{
     background: #ffc107;
 }
 
+.person{
+    vertical-align: top;
+}
+
+.person .picture{
+    width: 23vw;
+    height: 23vw;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 100px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    vertical-align: top;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+
+.mobile-menu{
+    display: none;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+.colored{
+    background: #0e0a32;
+    color: white;
+    position: relative;
+    margin-top: 150px;
+    padding-top: 100px;
+}
+
+.colored article{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.9em;
+}
+
+.artifact{
+    position: absolute;
+    left: 50%;
+    margin-left: -12.5%;
+    margin-top: -100px;
+    top: 0;
+}
+
+.persons{
+    text-align: center;
+}
+
+.person{
+    width: 200px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.person img{
+    border-radius: 100px;
+}
+
+.person p{
+    text-align: center;
+}
+
+.person small {
+    text-align: justify;
+    display: inline-block;
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+.calendar-dates p{
+    text-align: center;
+    display: flex;
+}
+
+
 @media screen and (max-width: 500px){
 
     nav ul{
@@ -248,83 +341,9 @@ p{
         padding-bottom: 0 !important;
     }
 
-}
+    .person small {
+        width: 82%;
+        font-size: 0.6em;
+    }
 
-.person{
-    vertical-align: top;
-}
-
-.person .picture{
-    width: 23vw;
-    height: 23vw;
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 100px;
-    background-size: cover;
-    background-position: center;
-    margin: 0 auto;
-    vertical-align: top;
-}
-
-a.anchor {
-    display: block;
-    position: relative;
-    top: -60px;
-    visibility: hidden;
-}
-
-.mobile-menu{
-    display: none;
-    margin-top: 6px;
-    margin-left: 10px;
-}
-
-.colored{
-    background: #0e0a32;
-    color: white;
-    position: relative;
-    margin-top: 150px;
-    padding-top: 100px;
-}
-
-.colored article{
-    width: 90%;
-    margin: 0 auto;
-    font-size: 0.9em;
-}
-
-.artifact{
-    position: absolute;
-    left: 50%;
-    margin-left: -12.5%;
-    margin-top: -100px;
-    top: 0;
-}
-
-.persons{
-    text-align: center;
-}
-
-.person{
-    width: 200px;
-    display: inline-block;
-    margin-right: 50px;
-}
-
-.person img{
-    border-radius: 100px;
-}
-
-.person p{
-    text-align: center;
-}
-
-.person small{
-    text-align: justify;
-    display: inline-block;
-    margin-top: -15px;
-}
-
-.calendar-dates p{
-    text-align: center;
 }
