@@ -55,8 +55,13 @@ vhr {
 }
 
 .header{
+    text-align: center;
+}
+
+.header img{
     max-height: 180px;
     margin-top: 20px;
+    width: unset !important;
 }
 
 .signup{
@@ -72,6 +77,10 @@ vhr {
 .body{
     width: 90%;
     margin: 60px auto 0 auto;
+}
+
+article.first{
+    padding-top: 0;
 }
 
 .body article{

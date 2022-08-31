@@ -44,3 +44,11 @@
 .calendar p{
     text-align: left;
 }
+
+@media screen and (max-width: 500px){
+
+    .header{
+        margin-top: 100px !important;
+    }
+
+}

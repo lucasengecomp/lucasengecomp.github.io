@@ -35,6 +35,8 @@ var Slider = {
 
 			if(k === 0) $(this).addClass('visible');
 
+			console.log($(this).outerHeight());
+
 			if($(this).outerHeight() > max){
 
 				max = $(this).outerHeight();

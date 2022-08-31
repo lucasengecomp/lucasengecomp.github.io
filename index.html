@@ -44,14 +44,14 @@
 
 <div class="body">
 
-	<article>
+	<article class="first">
 
 		<div class="slider">
 
-			<div class="slide">
+			<div class="slide header">
 
 				<picture>
-					<img class="header" src="res/img/header.png">
+					<img src="res/img/header.png">
 				</picture>
 
 			</div>
@@ -417,8 +417,12 @@
 <script type="text/javascript" src="res/js/menu.js"></script>
 <script type="text/javascript" src="res/js/accordion.js"></script>
 <script type="text/javascript">
-	
-Slider.start($('.body .slider'), $('.body .slider .slide'), $('.slider-btns'));
+
+$(function(){
+
+	Slider.start($('.body .slider'), $('.body .slider .slide'), $('.slider-btns'));
+
+});
 
 </script>
 
