@@ -1,8 +1,9 @@
 body{
-    font-family: arial;
+    font-family: Aller Regular;
 }
 
 nav{
+    font-family: 'Text Gyread Adventor Regular';
     background: url(../img/nav-gradient.png) repeat-y;
     background-size: contain;
     padding: 10px;
@@ -97,8 +98,12 @@ picture img{
     width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Text Gyread Adventor Regular';
+}
+
 h2{
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     margin-bottom: 20px;
 }
 

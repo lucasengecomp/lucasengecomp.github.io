@@ -14,6 +14,8 @@ var Slider = {
 		heightEnabled: false,
 		holder:        null,
 		elms:          [],
+		first:         true,
+		firstDelay:    2000
 
 	},
 
@@ -128,8 +130,14 @@ var Slider = {
 
 			return new Promise(function(resolve){
 
+				var delay = slider.delay;
+
+				if(slider.first) delay = slider.firstDelay || slider.delay;
+
+				slider.first = false;
+
 				clearTimeout(slider.timeout);
-				slider.timeout = setTimeout(slider.update, slider.delay);
+				slider.timeout = setTimeout(slider.update, delay);
 
 			});
 

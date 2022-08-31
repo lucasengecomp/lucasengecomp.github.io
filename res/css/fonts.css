@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Aller Bold Italic';
+    src: URL('../fonts/aller_bold_italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Aller Regular';
+    src: URL('../fonts/aller_regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Text Gyread Adventor Regular';
+    src: URL('../fonts/texgyreadventor-regular.otf') format('opentype');
+}
