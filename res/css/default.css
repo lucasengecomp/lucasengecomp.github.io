@@ -118,6 +118,17 @@ article.first{
     margin-top: 30px;
 }
 
+.who-we-are picture img {
+    max-height: 240px;
+    width: unset;
+    display: block;
+    margin-right: 24px;
+}
+
+.who-we-are picture {
+    float: left;
+}
+
 .who-we-are p{
     color: white;
 }
@@ -233,7 +244,7 @@ a.anchor {
     background: #0e0a32;
     color: white;
     position: relative;
-    margin-top: 150px;
+    margin-top: 140px;
     padding-top: 100px;
 }
 
@@ -370,6 +381,17 @@ a.anchor {
     .person small {
         width: 82%;
         font-size: 0.6em;
+    }
+
+    .who-we-are picture img{
+        max-width: 100%;
+        width: 100% !important;
+        height: unset;
+        max-height: unset;
+    }
+
+    article.first{
+        padding: 0;
     }
 
 }
