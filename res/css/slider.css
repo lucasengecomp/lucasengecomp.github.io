@@ -100,3 +100,13 @@
 .slider .slide.mentores a{
     height: unset;
 }
+
+.slider .winners p{
+    text-align: left;
+}
+
+.slider .winners img{
+    display: inline-block;
+    vertical-align: middle;
+    height: 1em;
+}
