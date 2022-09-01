@@ -103,19 +103,23 @@ article.first{
     display: inline-block;
 }
 
-.body aside p{
-    color: white;
-}
-
 .body aside{
     vertical-align: top;
     width: 38%;
     margin-left: 1%;
     display: inline-block;
+    /*background: #ffb04e;*/
+}
+
+.who-we-are{
     background: #ffb04e;
-    padding: 20px;
     color: white;
-    margin-top: 16px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.who-we-are p{
+    color: white;
 }
 
 .body aside h2{
