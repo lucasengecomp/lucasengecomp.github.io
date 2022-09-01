@@ -1,9 +1,13 @@
 body{
-    font-family: Aller Regular;
+    font-family: 'Text Gyread Adventor Regular';
+}
+
+p{
+    color: #484848;
 }
 
 nav{
-    font-family: 'Text Gyread Adventor Regular';
+    font-family: Aller Regular;
     background: url(../img/nav-gradient.png) repeat-y;
     background-size: contain;
     padding: 10px;
@@ -97,6 +101,10 @@ article.first{
     text-align: center;
     width: 100%;
     display: inline-block;
+}
+
+.body aside p{
+    color: white;
 }
 
 .body aside{
@@ -213,6 +221,10 @@ a.anchor {
     margin-left: 10px;
 }
 
+.colored p{
+    color: white;
+}
+
 .colored{
     background: #0e0a32;
     color: white;
@@ -251,6 +263,7 @@ a.anchor {
 
 .person p{
     text-align: center;
+    color: white;
 }
 
 .person small {

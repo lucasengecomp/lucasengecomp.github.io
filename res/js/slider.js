@@ -14,7 +14,7 @@ var Slider = {
 		heightEnabled: false,
 		holder:        null,
 		elms:          [],
-		first:         true,
+		first:         false,
 		firstDelay:    2000
 
 	},
