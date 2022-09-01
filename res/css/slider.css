@@ -80,3 +80,23 @@
 .slider-btns .slider-btn.visible{
     background: #ffc107;
 }
+
+.slider .slide a{
+    text-decoration: none;
+    color: black;
+    /*height: 250px;*/
+    display: inline-block;
+    width: 100%;
+}
+
+.slider .slide a iframe{
+    pointer-events: none;
+}
+
+.slide.mentores img{
+    width: 100%;
+}
+
+.slider .slide.mentores a{
+    height: unset;
+}
