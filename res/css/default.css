@@ -83,6 +83,10 @@ vhr {
     margin: 60px auto 0 auto;
 }
 
+.light-body{
+    margin-top: 0;
+}
+
 article.first{
     padding-top: 0;
 }

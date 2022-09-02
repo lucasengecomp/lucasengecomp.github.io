@@ -1,7 +1,11 @@
 .calendar{
-    columns: 2;
+    /*columns: 2;*/
     font-size: 0.8em;
-    margin-top: -30px;
+    /*margin-top: -30px;*/
+}
+
+.calendar img{
+    width: 100%;
 }
 
 .calendar p{
@@ -101,8 +105,12 @@
     height: unset;
 }
 
+.slider .winners{
+    text-align: center;
+}
+
 .slider .winners p{
-    text-align: left;
+    text-align: center;
 }
 
 .slider .winners img{
