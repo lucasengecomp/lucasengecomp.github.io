@@ -294,7 +294,24 @@ a.anchor {
 }
 
 
+@media screen and (min-width: 501px){
+
+    .desktop-2-columns{
+        columns: 2;
+    }
+
+}
+
+.desktop-2-columns div {
+    padding: 40px;
+    border: 3px dotted #f5f5f521;
+}
+
 @media screen and (max-width: 500px){
+
+    .como-participar{
+        margin-top: 20px;
+    }
 
     nav ul{
         display: block;
