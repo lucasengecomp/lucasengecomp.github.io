@@ -164,7 +164,7 @@ p{
     padding: 3%;
     margin: 1%;
     vertical-align: middle;
-    border-radius: 100px;
+    border-radius: 20px;
     font-size: 1.6em;
     transition: 200ms ease transform;
 }
@@ -172,23 +172,23 @@ p{
 .whiteboard:hover{
     transform: scale(1.05);
 }
-
+/*
 .whiteboard.one{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-
-.whiteboard.two{
+*/
+/*.whiteboard.two{
     border-radius: 0;
     padding: 4%;
-}
+}*/
 
-.whiteboard.three{
+/*.whiteboard.three{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-
+*/
 .slider-btns{
     display: inline-block;
     vertical-align: middle;
