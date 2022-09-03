@@ -227,6 +227,12 @@ p{
     vertical-align: top;
 }
 
+.partners{
+    padding: 10px;
+    background: #ebebeb;
+    padding-top: 40px;
+}
+
 .person .picture-parceiros{
     height: 200px;
     background-size: contain;
