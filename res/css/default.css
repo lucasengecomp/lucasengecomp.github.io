@@ -431,3 +431,8 @@ a.anchor {
     }
 
 }
+
+.alerts-js.o-modal.o-unloaded small, .alerts-js.o-modal.o-unloaded h2{
+    width: 400px;
+    display: block;
+}

@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="res/css/slider.css">
 	<link rel="stylesheet" type="text/css" href="res/css/default.css">
 	<link rel="stylesheet" type="text/css" href="res/css/accordion.css">
+	<link rel="stylesheet" type="text/css" href="res/css/alerts.css">
 </head>
 <body>
 
@@ -65,7 +66,7 @@
 			<div class="slide">
 
 				<a target="_blank" href="https://www.youtube.com/watch?v=-Z6bzrKBftg">
-					<iframe width="100%" height="250" src="https://www.youtube.com/embed/-Z6bzrKBftg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<img src="res/img/slider/link-para-youtube.png" height="270">
 				</a>
 
 			</div>
@@ -74,46 +75,25 @@
 
 				<a href="#datas">
 
-					<h2>Datas</h2>
-
-					<div class="calendar">
-
-						<img src="res/img/datas.png">
-<!-- 
-						<p>Hackaton Editora Cidade Nova do Futuro - Datas</p>
-						<p>Evento Lançamento e abertura inscrições no Hotsite - 01/10/2022</p>
-						<p>Lives com "pits" dos Mentores - agendas de 03 a 08/10/22</p>
-						<p>Fechamento Inscrições Hotsite - 14/10/2022</p>
-						<p>Divulgação Pré-Selecionados Hotsite - 18/10/2022</p>
-						<p>Evento Pré selecionados - 22/10/2022</p>
-						<p>Fechamento para Entrega Propostas - 04/11/2022</p>
-						<p>Divulgar Finalistas para evento encerramento - 07/11/2022</p>
-						<p>Evento Encerramento e premiação - 24 a 27/11</p>
- -->
-					</div>
+					<img src="res/img/slider/datas-2.png" height="270">
 
 				</a>
 
 			</div>
 
-			<div class="slide winners">
+			<div class="slide">
 
 				<a href="#premiacao">
 
-					<h2>Premiação</h2>
-
-					<p><img src="res/img/medal-gold.png"> 1 lugar: R$ 4.500 para cada equipe</p>
-					<p><img src="res/img/medal-silver.png"> 2 lugar: R$ 3.000 para cada equipe</p>
-					<p><img src="res/img/medal-bronze.png"> 3 lugar: R$ 1.500 para cada equipe</p>
+					<img src="res/img/slider/premiacao-2.png" height="270">
 
 				</a>
 
 			</div>
-			<div class="slide mentores">
+			<div class="slide">
 
 				<a href="#mentores">
-					<h2 class="center">Mentores</h2>
-					<img src="res/img/mentores/header.png">
+					<img src="res/img/slider/mentores.png" height="270">
 				</a>
 
 			</div>
@@ -155,6 +135,10 @@
 
 			<p class="center">
 
+				<a href="https://focolares.org.br" target="_blank">
+					<img src="res/img/focolare_portoghese_white.png" height="100">
+				</a>
+
 				<a href="https://www.cidadenova.org.br/" target="_blank">
 					<img src="res/img/full-logo.png" height="100">
 				</a>
@@ -195,6 +179,10 @@
 		<br>
 
 		<h2>Como será o Hackaton?</h2>
+
+		<p>O Hackaton Editora Cidade Nova 2022 é aberto a todos com nível universitário, acima de 18 anos, prioritariamente para as áreas:</p>
+
+		<h4>Tecnologia, Comunicação, Marketing, Jornalismo e Negócios</h4>
 
 		<p>Confira as principais etapas e venha participar conosco dessa jornada criativa.</p>
 
@@ -256,9 +244,9 @@
 
 		<br>
 
-		<div class="whiteboard one">Quais podem ser os modelos de negócios da Editora Cidade Nova do futuro?</div>
-		<div class="whiteboard two">Quais podem ser as soluções de Portal de Conteúdo e Loja On-line da Editora Cidade Nova do futuro?</div>
-		<div class="whiteboard three">Quais podem ser as soluções de Comunicação e Marketing da Editora Cidade Nova do futuro?</div>
+		<div class="whiteboard one" onclick="Default.alert1();">Quais podem ser os modelos de negócios da Editora Cidade Nova do futuro?</div>
+		<div class="whiteboard two" onclick="Default.alert2();">Quais podem ser as soluções de Portal de Conteúdo e Loja On-line da Editora Cidade Nova do futuro?</div>
+		<div class="whiteboard three" onclick="Default.alert3();">Quais podem ser as soluções de Comunicação e Marketing da Editora Cidade Nova do futuro?</div>
 
 		<br>
 		<br>
@@ -539,6 +527,7 @@
 </footer>
 
 <script type="text/javascript" src="res/js/jquery.js"></script>
+<script type="text/javascript" src="res/js/alerts.js"></script>
 <script type="text/javascript" src="res/js/slider.js"></script>
 <script type="text/javascript" src="res/js/default.js"></script>
 <script type="text/javascript" src="res/js/menu.js"></script>
