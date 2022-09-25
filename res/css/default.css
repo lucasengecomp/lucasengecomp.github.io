@@ -433,6 +433,17 @@ a.anchor {
 }
 
 .alerts-js.o-modal.o-unloaded small, .alerts-js.o-modal.o-unloaded h2{
-    width: 400px;
+    max-width: 400px;
     display: block;
+    max-width: 70vw;
+    margin: 15px;
+}
+
+.alerts-js.o-modal.o-unloaded small{
+    overflow: auto;
+    max-height: 400px;
+}
+
+.who-we-are a{
+    text-decoration: none;
 }
