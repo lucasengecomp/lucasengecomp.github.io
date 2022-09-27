@@ -6,7 +6,7 @@ var Default = {
 
 		Alerts.ok('Quais podem ser os modelos de negócios da Editora Cidade Nova do futuro?', {
 
-			description: "<p>Propostas de produtos e serviços que se apliquem a modelos de negócios mais dinâmicos e mais adequados ao mercado editorial em constante mutação. Portanto, é preciso estar atento às mudanças nos hábitos de leitura e de consumo, tendo em vista os recursos tecnológicos atuais e a infraestrutura da própria Editora.</p><p><b>Algumas indicações:</b> novas formas de publicação de conteúdos gratuitos e áreas exclusivas para assinantes.</p>",
+			description: "<p>Propostas de produtos e serviços que se apliquem a modelos de negócios mais dinâmicos e mais adequados ao mercado editorial em constante mutação. Portanto, é preciso estar atento às mudanças nos hábitos de leitura e de consumo, tendo em vista os recursos tecnológicos atuais e a infraestrutura da própria Editora.</p><p><b>Algumas indicações:</b>novos produtos e serviços de publicação de conteúdos gratuitos e exclusivos para assinantes e novos formatos do negócio ampliando a abordagem atual da Editora.</p>",
 
 			ready: function(modal){
 
