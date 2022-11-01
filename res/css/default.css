@@ -285,6 +285,14 @@ a.anchor {
     text-align: center;
 }
 
+.team{
+    text-align: center;
+}
+
+.team .person p{
+    color: white;
+}
+
 .person{
     width: 200px;
     display: inline-block;
