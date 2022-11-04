@@ -299,6 +299,10 @@ a.anchor {
     margin-right: 50px;
 }
 
+.team .person{
+    margin: 0 25px;
+}
+
 .person img{
     border-radius: 100px;
 }
