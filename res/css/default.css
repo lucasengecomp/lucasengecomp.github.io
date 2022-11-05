@@ -303,6 +303,16 @@ a.anchor {
     margin: 0 25px;
 }
 
+.team-holder{
+    background: url(../img/nav-gradient.png) repeat-y;
+    padding-top: 20px;
+    display: inline-block;
+    padding-bottom: 10px;
+    background-size: contain;
+    border-radius: 14px;
+    margin: 10px;
+}
+
 .person img{
     border-radius: 100px;
 }
