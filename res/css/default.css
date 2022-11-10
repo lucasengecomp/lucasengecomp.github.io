@@ -311,6 +311,20 @@ a.anchor {
     background-size: contain;
     border-radius: 14px;
     margin: 10px;
+    position: relative;
+}
+
+.finalists::before{
+    content: "";
+    width: 60px;
+    height: 24px;
+    background: url(../img/finalistas.png);
+    z-index: 123;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-size: cover;
 }
 
 .person img{
