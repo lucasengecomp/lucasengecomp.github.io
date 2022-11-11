@@ -316,10 +316,10 @@ a.anchor {
 
 .finalists::before{
     content: "";
-    width: 60px;
-    height: 24px;
+    width: 113px;
+    height: 44px;
     background: url(../img/finalistas.png);
-    z-index: 123;
+    z-index: 40;
     display: inline-block;
     position: absolute;
     top: 15px;
