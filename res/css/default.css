@@ -327,6 +327,45 @@ a.anchor {
     background-size: cover;
 }
 
+.first-winner::before{
+    content: "";
+    width: 188px;
+    height: 44px;
+    background: url(../img/first-winner.png);
+    z-index: 40;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-size: cover;
+}
+
+.second-winner::before{
+    content: "";
+    width: 188px;
+    height: 44px;
+    background: url(../img/second-winner.png);
+    z-index: 40;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-size: cover;
+}
+
+.third-winner::before{
+    content: "";
+    width: 188px;
+    height: 44px;
+    background: url(../img/third-winner.png);
+    z-index: 40;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-size: cover;
+}
+
 .person img{
     border-radius: 100px;
 }
@@ -366,6 +405,15 @@ a.anchor {
 
     .como-participar{
         margin-top: 20px;
+    }
+
+    .team-holder{
+        padding-top: 65px !important;
+    }
+
+    .first-winner::before, .second-winner::before, .third-winner::before{
+        left: 50%;
+        margin-left: -25%;
     }
 
     nav ul{
