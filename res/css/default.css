@@ -329,8 +329,8 @@ a.anchor {
 
 .first-winner::before{
     content: "";
-    width: 188px;
-    height: 44px;
+    width: 150px;
+    height: 35px;
     background: url(../img/first-winner.png);
     z-index: 40;
     display: inline-block;
@@ -342,8 +342,8 @@ a.anchor {
 
 .second-winner::before{
     content: "";
-    width: 188px;
-    height: 44px;
+    width: 150px;
+    height: 35px;
     background: url(../img/second-winner.png);
     z-index: 40;
     display: inline-block;
@@ -355,8 +355,8 @@ a.anchor {
 
 .third-winner::before{
     content: "";
-    width: 188px;
-    height: 44px;
+    width: 150px;
+    height: 35px;
     background: url(../img/third-winner.png);
     z-index: 40;
     display: inline-block;
