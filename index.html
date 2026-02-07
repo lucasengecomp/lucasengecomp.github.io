@@ -3,41 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Homepage</title>
+    <meta name="description" content="Lucas Castro - Software Engineer & Technology Enthusiast">
+    <title>Lucas Castro - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Homepage</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#home">Lucas Castro</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>This is a brief introduction about myself and my interests.</p>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm Lucas Castro</h1>
+                <p class="hero-subtitle">Software Engineer & Technology Enthusiast</p>
+                <p class="hero-description">Building innovative solutions with code</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
         </section>
-        <section id="projects">
-            <h2>My Projects</h2>
-            <p>Here are some of the projects I've worked on:</p>
-            <ul>
-                <li><a href="https://github.com/username/project1">Project 1</a></li>
-                <li><a href="https://github.com/username/project2">Project 2</a></li>
-                <li><a href="https://github.com/username/project3">Project 3</a></li>
-            </ul>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I'm a passionate software engineer with a love for building scalable applications and exploring new technologies. I enjoy solving complex problems and contributing to open-source projects.</p>
+                <div class="skills">
+                    <div class="skill-item">
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS, JavaScript, React, Node.js</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Backend Development</h3>
+                        <p>Python, Java, SQL, REST APIs</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Tools & Platforms</h3>
+                        <p>Git, Docker, AWS, GitHub</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>You can reach me at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Project One</h3>
+                        <p>A brief description of your first project and the technologies used.</p>
+                        <a href="https://github.com/lucascastro" class="project-link">View on GitHub →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Project Two</h3>
+                        <p>A brief description of your second project and the technologies used.</p>
+                        <a href="https://github.com/lucascastro" class="project-link">View on GitHub →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Project Three</h3>
+                        <p>A brief description of your third project and the technologies used.</p>
+                        <a href="https://github.com/lucascastro" class="project-link">View on GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>I'm always interested in hearing about new projects and opportunities.</p>
+                <div class="contact-links">
+                    <a href="mailto:your-email@example.com" class="contact-link">Email</a>
+                    <a href="https://github.com/lucascastro" class="contact-link">GitHub</a>
+                    <a href="https://linkedin.com/in/lucascastro" class="contact-link">LinkedIn</a>
+                    <a href="https://twitter.com/lucascastro" class="contact-link">Twitter</a>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 My Homepage. All rights reserved.</p>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Lucas Castro. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
