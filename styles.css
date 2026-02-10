@@ -6,13 +6,13 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --bg-light: #f9fafb;
+    --primary-color: #10b981; /* emerald-500 */
+    --secondary-color: #064e3b; /* emerald-900 */
+    --text-dark: #0f172a;
+    --text-light: #4b5563;
+    --bg-light: #f7fdf8;
     --bg-white: #ffffff;
-    --border-color: #e5e7eb;
+    --border-color: #e6f4ea;
     --transition: all 0.3s ease;
 }
 
@@ -117,7 +117,7 @@ a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #34d399 0%, #059669 100%);
     color: white;
     padding: 6rem 2rem;
     text-align: center;
@@ -165,7 +165,7 @@ a:hover {
 
 .btn-primary {
     background-color: var(--bg-white);
-    color: #667eea;
+    color: var(--primary-color);
 }
 
 .btn-primary:hover {
@@ -181,7 +181,7 @@ a:hover {
 
 .btn-secondary:hover {
     background-color: white;
-    color: #667eea;
+    color: var(--primary-color);
     transform: translateY(-2px);
 }
 
