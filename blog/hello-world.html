@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apresentando o novo site — Lucas Castro">
+  <title>Bem-vindo ao meu site — Blog — Lucas Castro</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-dot"></span>
+        Lucas Castro
+      </a>
+      <nav>
+        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/projects.html" class="nav__link">Projetos</a></li>
+          <li><a href="/resume.html" class="nav__link">Currículo</a></li>
+          <li><a href="/blog.html" class="nav__link">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <article class="post-article">
+
+          <header class="post-article__header">
+            <div class="tags" style="margin-bottom:1rem;">
+              <span class="tag tag--gray">Meta</span>
+            </div>
+            <h1 class="post-article__title">Bem-vindo ao meu site</h1>
+            <div class="post-article__meta">
+              <span>Lucas Castro</span>
+              <span>·</span>
+              <span>25 Mai 2026</span>
+              <span>·</span>
+              <span>5 min de leitura</span>
+            </div>
+          </header>
+
+          <div class="post-article__content">
+            <p>
+              Depois de um tempo com uma página bem simples (só o básico mesmo), decidi reconstruir o site do zero
+              com uma estrutura que faça mais sentido para o que quero comunicar: quem sou, o que construo,
+              o que aprendo.
+            </p>
+
+            <h2>Por que reescrever?</h2>
+            <p>
+              O site anterior era funcional, mas não refletia minha trajetória. Faltava contexto — projetos sem
+              detalhe, skills genéricas, nenhum espaço para escrita. Queria algo que servisse como portfólio real,
+              currículo online e espaço de experimentação ao mesmo tempo.
+            </p>
+
+            <blockquote>
+              <p>Um site pessoal é uma das poucas coisas na web onde você tem controle total. Vale a pena caprichar.</p>
+            </blockquote>
+
+            <h2>A stack</h2>
+            <p>
+              A decisão mais óbvia para mim foi usar <strong>HTML, CSS e JavaScript puros</strong>, sem framework.
+              Não porque frameworks sejam ruins — longe disso — mas porque quero que o site sirva também como
+              laboratório de conceitos web. É mais fácil entender o que acontece sem uma camada de abstração.
+            </p>
+            <p>O deploy é feito via <strong>GitHub Actions</strong> direto para o GitHub Pages, com domínio customizado em <code>castrolftech.com</code>.</p>
+            <p>Alguns conceitos que já aparecem no código:</p>
+            <ul>
+              <li><strong>CSS Custom Properties</strong> — todo o design system em variáveis CSS</li>
+              <li><strong>IntersectionObserver API</strong> — animações de scroll sem dependências</li>
+              <li><strong>CSS Grid e Flexbox</strong> — layout responsivo sem frameworks CSS</li>
+              <li>Design <em>mobile-first</em> com <code>clamp()</code> para tipografia fluida</li>
+            </ul>
+
+            <h2>O que vem por aí</h2>
+            <p>Tenho alguns artigos que quero escrever em breve:</p>
+            <ul>
+              <li>Modelagem dimensional com dbt na prática</li>
+              <li>Feature engineering para modelos de churn</li>
+              <li>Como estruturo um projeto de dados do zero</li>
+              <li>Spark vs. DuckDB: quando usar cada um</li>
+            </ul>
+            <p>
+              Também tenho uma seção chamada <strong>Focolares</strong> — um espaço privado onde vou explorar
+              ferramentas, APIs e experimentos web antes de escrever sobre eles formalmente.
+            </p>
+
+            <h2>Feedback</h2>
+            <p>
+              Se tiver algum comentário, sugestão ou quiser bater um papo sobre dados, me manda um e-mail ou
+              conecta no LinkedIn.
+            </p>
+          </div>
+
+          <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+            <a href="/blog.html" class="btn btn--ghost btn--sm">← Voltar ao Blog</a>
+            <div style="display:flex;gap:.75rem;">
+              <a href="mailto:lucasengecomp@gmail.com" class="btn btn--outline btn--sm">Enviar feedback</a>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Lucas Castro · <a href="/focolares/">Focolares</a></p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

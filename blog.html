@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog de Lucas Castro — artigos sobre engenharia de dados e machine learning.">
+  <title>Blog — Lucas Castro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-dot"></span>
+        Lucas Castro
+      </a>
+      <nav>
+        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/projects.html" class="nav__link">Projetos</a></li>
+          <li><a href="/resume.html" class="nav__link">Currículo</a></li>
+          <li><a href="/blog.html" class="nav__link">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <p class="page-header__label">Escrita</p>
+        <h1 class="page-header__title">Blog</h1>
+        <p class="page-header__desc">Artigos sobre engenharia de dados, machine learning, arquitetura e aprendizados do dia a dia.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container" style="max-width:760px;">
+
+        <!-- Tags filter -->
+        <div class="filter-bar animate-on-scroll" style="margin-bottom:2.5rem;">
+          <button class="filter-btn active">Todos</button>
+          <button class="filter-btn">Engenharia de Dados</button>
+          <button class="filter-btn">Machine Learning</button>
+          <button class="filter-btn">Carreira</button>
+          <button class="filter-btn">Meta</button>
+        </div>
+
+        <div class="posts-list stagger">
+
+          <a href="/blog/hello-world.html" style="text-decoration:none;color:inherit;" class="animate-on-scroll">
+            <article class="post-item">
+              <div>
+                <div class="post-item__meta">
+                  <span>25 Mai 2026</span>
+                  <span>·</span>
+                  <span>5 min de leitura</span>
+                </div>
+                <h3 class="post-item__title">Bem-vindo ao meu site</h3>
+                <p class="post-item__excerpt">
+                  Apresentando o novo site — motivações, tecnologias usadas e o que planejo escrever por aqui
+                  sobre engenharia de dados, ML e exploração de conceitos web.
+                </p>
+                <div class="tags">
+                  <span class="tag tag--gray">Meta</span>
+                </div>
+              </div>
+              <span class="post-item__read-more">Ler →</span>
+            </article>
+          </a>
+
+          <!-- Placeholder articles -->
+          <article class="post-item animate-on-scroll" style="opacity:.5;pointer-events:none;">
+            <div>
+              <div class="post-item__meta">
+                <span>Em breve</span>
+                <span>·</span>
+                <span>~8 min</span>
+              </div>
+              <h3 class="post-item__title">Modelagem dimensional com dbt: Bronze, Silver e Gold na prática</h3>
+              <p class="post-item__excerpt">
+                Como estruturo camadas de transformação no data warehouse usando dbt, com exemplos reais de testes e documentação automatizada.
+              </p>
+              <div class="tags">
+                <span class="tag tag--gray">Engenharia de Dados</span>
+                <span class="tag tag--gray">dbt</span>
+              </div>
+            </div>
+            <span class="post-item__read-more" style="color:var(--text-muted);">Em breve</span>
+          </article>
+
+          <article class="post-item animate-on-scroll" style="opacity:.5;pointer-events:none;">
+            <div>
+              <div class="post-item__meta">
+                <span>Em breve</span>
+                <span>·</span>
+                <span>~10 min</span>
+              </div>
+              <h3 class="post-item__title">Feature Engineering para modelos de churn: o que realmente importa</h3>
+              <p class="post-item__excerpt">
+                Lições aprendidas ao construir features para modelos preditivos de churn — desde a criação até a interpretação com SHAP values.
+              </p>
+              <div class="tags">
+                <span class="tag tag--gray">Machine Learning</span>
+                <span class="tag tag--gray">Feature Engineering</span>
+              </div>
+            </div>
+            <span class="post-item__read-more" style="color:var(--text-muted);">Em breve</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Lucas Castro · <a href="/focolares/">Focolares</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

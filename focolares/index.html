@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Focolares — sandbox pessoal de Lucas Castro.">
+  <title>Focolares — Lucas Castro</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-dot"></span>
+        Lucas Castro
+      </a>
+      <nav>
+        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/projects.html" class="nav__link">Projetos</a></li>
+          <li><a href="/resume.html" class="nav__link">Currículo</a></li>
+          <li><a href="/blog.html" class="nav__link">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <p class="page-header__label">Área privada</p>
+        <h1 class="page-header__title">Focolares 🔥</h1>
+        <p class="page-header__desc">
+          Sandbox pessoal. Experimentos, ferramentas em teste e rascunhos que ainda não viraram artigo.
+          Esta página não está indexada nos mecanismos de busca.
+        </p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+
+        <div style="background:var(--bg-green);border:1px solid var(--primary-border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:3rem;display:flex;gap:.75rem;align-items:flex-start;" class="animate-on-scroll">
+          <span style="font-size:1.25rem;flex-shrink:0;">💡</span>
+          <p style="margin:0;font-size:.9rem;color:var(--c-green-700);">
+            <strong>Como funciona:</strong> cada item aqui é um experimento, uma ferramenta ou uma ideia em desenvolvimento.
+            Status: <strong>Ativo</strong> (em uso), <strong>WIP</strong> (em construção) ou <strong>Ideia</strong> (a explorar).
+          </p>
+        </div>
+
+        <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:1.5rem;" class="animate-on-scroll">Experimentos Web</h2>
+        <div class="focolares-grid stagger" style="margin-bottom:3rem;">
+          <div class="focoitem animate-on-scroll">
+            <p class="focoitem__status focoitem__status--wip">WIP</p>
+            <h3 class="focoitem__title">CSS Scroll Animations</h3>
+            <p class="focoitem__desc">Explorando IntersectionObserver e scroll-driven animations sem JavaScript. CSS puro até onde for possível.</p>
+          </div>
+          <div class="focoitem animate-on-scroll">
+            <p class="focoitem__status focoitem__status--idea">Ideia</p>
+            <h3 class="focoitem__title">View Transitions API</h3>
+            <p class="focoitem__desc">Transições de página nativas do browser, sem frameworks. Testar viabilidade para MPA (multi-page apps).</p>
+          </div>
+          <div class="focoitem animate-on-scroll">
+            <p class="focoitem__status focoitem__status--idea">Ideia</p>
+            <h3 class="focoitem__title">CSS Container Queries</h3>
+            <p class="focoitem__desc">Componentes que se adaptam ao container pai, não à viewport. Ideal para cards reutilizáveis.</p>
+          </div>
+          <div class="focoitem animate-on-scroll">
+            <p class="focoitem__status focoitem__status--idea">Ideia</p>
+            <h3 class="focoitem__title">Web Components nativos</h3>
+            <p class="focoitem__desc">Custom elements e Shadow DOM sem framework. Quanto do React dá pra fazer nativamente?</p>
+          </div>
+        </div>
+
+        <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:1.5rem;" class="animate-on-scroll">Ferramentas & APIs</h2>
+        <div class="focolares-grid stagger" style="margin-bottom:3rem;">
+          <div class="focoitem animate-on-scroll">
+            <p class="focoitem__status focoitem__status--wip">WIP</p>
+            <h3 class="focoitem__title">DuckDB no Browser</h3>
+            <p class="focoitem__desc">Rodar queries SQL analíticas diretamente no browser via WebAssembly. SQL sem servidor.</p>
+          </div>
+          <div class="focoitem animate-on-scroll">
+            <p class="focoitem__status focoitem__status--idea">Ideia</p>
+            <h3 class="focoitem__title">Observable Plot</h3>
+            <p class="focoitem__desc">Visualizações de dados com a biblioteca da Observable. Alternativa ao D3 com API mais amigável.</p>
+          </div>
+          <div class="focoitem animate-on-scroll">
+            <p class="focoitem__status focoitem__status--idea">Ideia</p>
+            <h3 class="focoitem__title">WASM + Python (Pyodide)</h3>
+            <p class="focoitem__desc">Rodar Python + pandas no browser via Pyodide. Playground de ML sem backend.</p>
+          </div>
+        </div>
+
+        <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:1.5rem;" class="animate-on-scroll">Rascunhos de Artigos</h2>
+        <div class="focolares-grid stagger">
+          <div class="focoitem animate-on-scroll">
+            <p class="focoitem__status focoitem__status--wip">WIP</p>
+            <h3 class="focoitem__title">Spark vs DuckDB</h3>
+            <p class="focoitem__desc">Quando usar cada um. Benchmarks com datasets de tamanhos diferentes e casos de uso reais.</p>
+          </div>
+          <div class="focoitem animate-on-scroll">
+            <p class="focoitem__status focoitem__status--idea">Ideia</p>
+            <h3 class="focoitem__title">Data Mesh na prática</h3>
+            <p class="focoitem__desc">O que realmente muda quando você adota data mesh. Separando hype de decisões técnicas concretas.</p>
+          </div>
+          <div class="focoitem animate-on-scroll">
+            <p class="focoitem__status focoitem__status--idea">Ideia</p>
+            <h3 class="focoitem__title">LLMs em pipelines de dados</h3>
+            <p class="focoitem__desc">Como usar modelos de linguagem para enriquecer dados, classificar texto e gerar features automáticas.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Lucas Castro · <a href="/">← Voltar ao site</a></p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
