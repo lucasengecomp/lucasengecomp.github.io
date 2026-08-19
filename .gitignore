@@ -48,3 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Backup de fotos originais (não versionar)
+polo-a-venda/img/original/
+

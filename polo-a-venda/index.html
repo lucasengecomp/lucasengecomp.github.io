@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="VW Polo Highline 2019 200 TSI Automático — Segundo dono, revisado, pneus novos. Vargem Grande Paulista - SP.">
+  <title>VW Polo Highline 2019 — R$ 81.900 · Lucas Castro</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* ================ Estilos específicos do anúncio ================ */
+    .car-header {
+      padding-block: 3rem 2rem;
+      background: linear-gradient(to bottom, var(--bg-green), var(--bg));
+      border-bottom: 1px solid var(--border);
+    }
+    .car-header__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .car-header__title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      margin-bottom: .5rem;
+    }
+    .car-header__subtitle {
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+    .car-price {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-lg);
+      text-align: right;
+      box-shadow: var(--shadow-md);
+    }
+    .car-price__label {
+      display: block;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .85;
+      margin-bottom: .15rem;
+    }
+    .car-price__value {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      line-height: 1;
+    }
+    .car-quickfacts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: .75rem;
+    }
+    .car-quickfact {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: .75rem 1rem;
+    }
+    .car-quickfact__label {
+      display: block;
+      font-size: .7rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: .15rem;
+    }
+    .car-quickfact__value {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* Galeria */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: .75rem;
+    }
+    .gallery__item {
+      aspect-ratio: 4 / 3;
+      background: var(--bg-subtle);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: .85rem;
+      overflow: hidden;
+    }
+    .gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+    .gallery__item--wide { grid-column: span 2; }
+    .gallery__item:has(img) { cursor: zoom-in; }
+    .gallery__item:has(img):hover img { transform: scale(1.03); }
+    .gallery__item img { transition: transform .3s ease; }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.94);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.is-open { display: flex; }
+    body.lightbox-open { overflow: hidden; }
+    .lightbox__img {
+      max-width: 95vw;
+      max-height: 88vh;
+      object-fit: contain;
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+      border-radius: 4px;
+    }
+    .lightbox__btn {
+      position: absolute;
+      background: rgba(255,255,255,.12);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.6rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .15s ease;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .lightbox__btn:hover { background: rgba(255,255,255,.24); }
+    .lightbox__close { top: 1.25rem; right: 1.25rem; width: 44px; height: 44px; }
+    .lightbox__nav {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+      height: 52px;
+    }
+    .lightbox__nav--prev { left: 1.25rem; }
+    .lightbox__nav--next { right: 1.25rem; }
+    .lightbox__counter {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      background: rgba(0,0,0,.55);
+      padding: .35rem .85rem;
+      border-radius: 999px;
+      font-size: .82rem;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .lightbox__loading {
+      position: absolute;
+      color: rgba(255,255,255,.6);
+      font-size: .9rem;
+      display: none;
+    }
+    .lightbox.is-loading .lightbox__loading { display: block; }
+    .lightbox.is-loading .lightbox__img { opacity: .3; }
+    @media (max-width: 640px) {
+      .lightbox__nav { width: 40px; height: 40px; font-size: 1.3rem; }
+      .lightbox__nav--prev { left: .5rem; }
+      .lightbox__nav--next { right: .5rem; }
+    }
+
+    /* Vídeo */
+    .video-wrap {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: var(--c-slate-900);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-caption {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .85rem;
+      color: var(--text-muted);
+      margin-top: .75rem;
+      justify-content: center;
+    }
+
+    /* Blocos de conteúdo */
+    .car-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .car-block {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .car-block__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .car-block p { margin-bottom: .75rem; }
+    .car-block p:last-child { margin-bottom: 0; }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+    }
+    .spec-table td {
+      padding: .55rem .25rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+    .spec-table tr:last-child td { border-bottom: none; }
+    .spec-table td:first-child {
+      font-weight: 600;
+      color: var(--text-primary);
+      width: 42%;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .5rem .75rem;
+      padding: 0;
+    }
+    .feature-list li {
+      font-size: .9rem;
+      color: var(--text-secondary);
+      padding-left: 1.4rem;
+      position: relative;
+      line-height: 1.5;
+    }
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* Sidebar de contato */
+    .contact-card {
+      background: linear-gradient(135deg, var(--c-green-600) 0%, var(--c-green-900) 100%);
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      position: sticky;
+      top: calc(var(--nav-height) + 1rem);
+    }
+    .contact-card__label {
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .8;
+      margin-bottom: .5rem;
+    }
+    .contact-card__title {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .contact-card p {
+      color: rgba(255,255,255,.85);
+      font-size: .9rem;
+      margin-bottom: 1.25rem;
+    }
+    .contact-card .btn { width: 100%; justify-content: center; margin-bottom: .5rem; }
+    .btn--whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    .btn--whatsapp:hover {
+      background: #1ebe58;
+      color: white;
+      transform: translateY(-1px);
+    }
+    .btn--white-outline {
+      border-color: rgba(255,255,255,.4);
+      color: white;
+      background: transparent;
+    }
+    .btn--white-outline:hover {
+      background: rgba(255,255,255,.1);
+      color: white;
+    }
+    .contact-meta {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,.15);
+      font-size: .82rem;
+    }
+    .contact-meta__item {
+      display: flex;
+      gap: .5rem;
+      margin-bottom: .35rem;
+      color: rgba(255,255,255,.8);
+    }
+
+    .highlight-badge {
+      display: inline-block;
+      background: var(--bg-green);
+      color: var(--primary-darker);
+      border: 1px solid var(--primary-border);
+      padding: .2rem .65rem;
+      border-radius: var(--radius-full);
+      font-size: .72rem;
+      font-weight: 700;
+      margin-right: .35rem;
+      margin-bottom: .35rem;
+    }
+
+    @media (max-width: 900px) {
+      .car-grid { grid-template-columns: 1fr; }
+      .contact-card { position: static; }
+      .feature-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-dot"></span>
+        Lucas Castro
+      </a>
+      <nav>
+        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/projects.html" class="nav__link">Projetos</a></li>
+          <li><a href="/resume.html" class="nav__link">Currículo</a></li>
+          <li><a href="/blog.html" class="nav__link">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HEADER DO ANÚNCIO -->
+    <section class="car-header">
+      <div class="container">
+        <div class="car-header__top">
+          <div>
+            <span class="page-header__label">À venda pelo dono</span>
+            <h1 class="car-header__title">VW Polo Highline 2019</h1>
+            <p class="car-header__subtitle">200 TSI 1.0 Turbo Flex · Câmbio automático · Segundo dono</p>
+            <div style="margin-top:1rem;">
+              <span class="highlight-badge">Pneus novos (jan/2026)</span>
+              <span class="highlight-badge">Revisões em dia</span>
+              <span class="highlight-badge">Manual original</span>
+              <span class="highlight-badge">Sem batidas</span>
+            </div>
+          </div>
+          <div class="car-price">
+            <span class="car-price__label">Valor</span>
+            <span class="car-price__value">R$ 81.900</span>
+          </div>
+        </div>
+
+        <div class="car-quickfacts">
+          <div class="car-quickfact">
+            <span class="car-quickfact__label">Ano/Modelo</span>
+            <span class="car-quickfact__value">2019</span>
+          </div>
+          <div class="car-quickfact">
+            <span class="car-quickfact__label">Km</span>
+            <span class="car-quickfact__value">135.000</span>
+          </div>
+          <div class="car-quickfact">
+            <span class="car-quickfact__label">Câmbio</span>
+            <span class="car-quickfact__value">Automático</span>
+          </div>
+          <div class="car-quickfact">
+            <span class="car-quickfact__label">Combustível</span>
+            <span class="car-quickfact__value">Flex</span>
+          </div>
+          <div class="car-quickfact">
+            <span class="car-quickfact__label">Cor</span>
+            <span class="car-quickfact__value">Prata</span>
+          </div>
+          <div class="car-quickfact">
+            <span class="car-quickfact__label">Local</span>
+            <span class="car-quickfact__value">Vargem Grande Paulista - SP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="section" style="padding-block: 2.5rem;">
+      <div class="container">
+        <div class="gallery" id="gallery">
+          <!-- Fotos carregadas via photos.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- VÍDEO -->
+    <section class="section" style="padding-block: 0 2.5rem;">
+      <div class="container">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/zRpim8CF9jw"
+            title="VW Polo Highline 2019 — vídeo do veículo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+        <p class="video-caption">
+          🎥 Vídeo do veículo ·
+          <a href="https://youtu.be/zRpim8CF9jw" target="_blank" rel="noopener">abrir no YouTube</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="car-grid">
+
+          <!-- Coluna principal -->
+          <div>
+
+            <div class="car-block">
+              <h2 class="car-block__title">📝 Descrição</h2>
+              <p style="font-style:italic;color:var(--primary-darker);border-left:3px solid var(--primary);padding:.4rem 0 .4rem 1rem;background:var(--bg-green);border-radius:0 var(--radius) var(--radius) 0;">Sai o hatch esportivo… entra a minivan 7 lugares!</p>
+              <p>Vendo VW Polo 2019, versão Highline completa. Veículo impecável, bem cuidado e revisado em dia. Excelente oportunidade para quem procura um carro confiável com muito equipamento de série.</p>
+              <p>Adquirido em novembro de 2020 como segundo dono, com 22.000 km. Sempre bem conservado, sem batidas, com pintura, lataria e interior em ótimo estado. Pneus trocados em janeiro de 2026 com 120.000 km — praticamente sem uso. Acompanha manual original.</p>
+            </div>
+
+            <div class="car-block">
+              <h2 class="car-block__title">🔧 Ficha técnica</h2>
+              <table class="spec-table">
+                <tr><td>Motor</td><td>1.0 TSI Turbo (200 TSI)</td></tr>
+                <tr><td>Potência</td><td>138 cv @ 5.500 rpm</td></tr>
+                <tr><td>Combustível</td><td>Flex (gasolina / etanol)</td></tr>
+                <tr><td>Câmbio</td><td>Automático</td></tr>
+                <tr><td>Tração</td><td>Dianteira</td></tr>
+                <tr><td>Velocidade máxima</td><td>187 km/h (gasolina) · 192 km/h (etanol)</td></tr>
+                <tr><td>Tanque</td><td>~52 L (reserva de 8 L)</td></tr>
+                <tr><td>Comprimento</td><td>4.055 mm</td></tr>
+                <tr><td>Largura</td><td>1.751 mm (sem espelhos)</td></tr>
+                <tr><td>Entre-eixos</td><td>2.565 mm</td></tr>
+              </table>
+            </div>
+
+            <div class="car-block">
+              <h2 class="car-block__title">✨ Equipamentos — Conforto</h2>
+              <ul class="feature-list">
+                <li>Ar-condicionado automático</li>
+                <li>Banco do motorista com ajuste de altura em couro</li>
+                <li>Volante em couro com ajuste de altura</li>
+                <li>Direção hidráulica progressiva</li>
+                <li>Vidros elétricos nas 4 portas</li>
+                <li>Travas elétricas com bloqueio em movimento</li>
+                <li>Espelhos elétricos com desembaçador</li>
+                <li>Sensor de chuva automático</li>
+                <li>Computador de bordo</li>
+                <li>Central multimídia com Bluetooth e USB</li>
+                <li>Apoio de braço central</li>
+                <li>Segurança infantil nos vidros</li>
+              </ul>
+            </div>
+
+            <div class="car-block">
+              <h2 class="car-block__title">🛡️ Equipamentos — Segurança</h2>
+              <ul class="feature-list">
+                <li>Airbags duplos (motorista e passageiro)</li>
+                <li>Pré-tensionadores dos cintos</li>
+                <li>Freios ABS 4 canais</li>
+                <li>Controle de estabilidade (ESC)</li>
+                <li>Distribuição eletrônica de frenagem</li>
+                <li>Sensores dianteiro e traseiro de estacionamento</li>
+                <li>Câmera de ré com guia visual</li>
+                <li>Isofix para cadeirinha (traseira)</li>
+              </ul>
+            </div>
+
+            <div class="car-block">
+              <h2 class="car-block__title">🚗 Estado do veículo</h2>
+              <ul class="feature-list">
+                <li>Segundo dono desde nov/2020 (5 anos comigo)</li>
+                <li>Comprado com 22.000 km</li>
+                <li>Pneus novos — trocados em jan/2026</li>
+                <li>Sem batidas · lataria e pintura preservadas</li>
+                <li>Interior impecável</li>
+                <li>Revisões em dia</li>
+                <li>Documentação em ordem</li>
+                <li>Manual original incluído</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Sidebar de contato -->
+          <aside>
+            <div class="contact-card">
+              <div class="contact-card__label">Interessado?</div>
+              <div class="contact-card__title">Fale comigo direto</div>
+              <p>Sem intermediários. Aceito PIX, dinheiro ou transferência. Financiamento é conversa aberta. Test-drive com documentos, agendado por WhatsApp.</p>
+
+              <a href="https://wa.me/5516992370209?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Polo%20Highline%202019%20anunciado%20no%20seu%20site."
+                 class="btn btn--whatsapp btn--lg"
+                 target="_blank" rel="noopener">
+                💬 Chamar no WhatsApp
+              </a>
+              <a href="tel:+5516992370209" class="btn btn--white-outline">
+                📞 Ligar (16) 99237-0209
+              </a>
+
+              <div class="contact-meta">
+                <div class="contact-meta__item">📍 Vargem Grande Paulista - SP</div>
+                <div class="contact-meta__item">🕐 Melhor horário: qualquer dia via WhatsApp</div>
+                <div class="contact-meta__item">💰 R$ 81.900</div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+    <button class="lightbox__btn lightbox__close" id="lb-close" aria-label="Fechar (Esc)">✕</button>
+    <button class="lightbox__btn lightbox__nav lightbox__nav--prev" id="lb-prev" aria-label="Anterior (←)">‹</button>
+    <button class="lightbox__btn lightbox__nav lightbox__nav--next" id="lb-next" aria-label="Próxima (→)">›</button>
+    <span class="lightbox__loading">Carregando…</span>
+    <img class="lightbox__img" id="lb-img" alt="">
+    <div class="lightbox__counter" id="lb-counter"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Lucas Castro · <a href="/">Voltar ao site</a></p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script src="photos.js"></script>
+  <script>
+    (function renderGallery() {
+      const gallery = document.getElementById('gallery');
+      const photos = (window.carPhotos || []).slice();
+      if (!photos.length) {
+        gallery.innerHTML = '<div class="gallery__item gallery__item--wide">Fotos em breve</div>';
+        return;
+      }
+      photos.sort((a, b) => (parseInt(a, 10) || 0) - (parseInt(b, 10) || 0));
+
+      const altOf = (filename) => filename
+        .replace(/^\d+[-_]/, '')
+        .replace(/\.\w+$/i, '')
+        .replace(/[_-]/g, ' ')
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        .trim();
+
+      photos.forEach((filename, idx) => {
+        const item = document.createElement('div');
+        item.className = 'gallery__item' + (idx === 0 ? ' gallery__item--wide' : '');
+        item.dataset.index = idx;
+        const img = document.createElement('img');
+        img.src = 'img/' + filename;
+        img.loading = 'lazy';
+        img.alt = altOf(filename);
+        item.appendChild(img);
+        gallery.appendChild(item);
+      });
+
+      // Lightbox
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const lbCounter = document.getElementById('lb-counter');
+      let current = 0;
+
+      function show(idx) {
+        current = (idx + photos.length) % photos.length;
+        const filename = photos[current];
+        lb.classList.add('is-loading');
+        lbImg.src = '';
+        lbImg.alt = altOf(filename);
+        const preload = new Image();
+        preload.onload = () => {
+          lbImg.src = preload.src;
+          lb.classList.remove('is-loading');
+        };
+        preload.src = 'img/' + filename;
+        lbCounter.textContent = (current + 1) + ' / ' + photos.length;
+      }
+
+      function open(idx) {
+        show(idx);
+        lb.classList.add('is-open');
+        document.body.classList.add('lightbox-open');
+      }
+
+      function close() {
+        lb.classList.remove('is-open');
+        document.body.classList.remove('lightbox-open');
+      }
+
+      gallery.addEventListener('click', (e) => {
+        const item = e.target.closest('.gallery__item');
+        if (!item) return;
+        open(parseInt(item.dataset.index, 10));
+      });
+
+      document.getElementById('lb-close').addEventListener('click', close);
+      document.getElementById('lb-prev').addEventListener('click', (e) => { e.stopPropagation(); show(current - 1); });
+      document.getElementById('lb-next').addEventListener('click', (e) => { e.stopPropagation(); show(current + 1); });
+      lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lb.classList.contains('is-open')) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowLeft') show(current - 1);
+        else if (e.key === 'ArrowRight') show(current + 1);
+      });
+    })();
+  </script>
+</body>
+</html>
