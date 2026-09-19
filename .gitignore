@@ -48,6 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
-# Backup de fotos originais (não versionar)
-polo-a-venda/img/original/
+# Anúncio de venda do Polo (carro vendido — mantido local, fora do deploy)
+polo-a-venda/
 
