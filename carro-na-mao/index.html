@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carro na Mão — case study: app Flutter de controle de veículos, V1 Android em produção, pipeline de release próprio via GitHub Actions.">
+  <title>Carro na Mão — Lucas Castro</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-dot"></span>
+        Lucas Castro
+      </a>
+      <nav>
+        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/projects.html" class="nav__link">Projetos</a></li>
+          <li><a href="/resume.html" class="nav__link">Currículo</a></li>
+          <li><a href="/blog.html" class="nav__link">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <p class="page-header__label">Projeto pessoal · Mobile</p>
+        <h1 class="page-header__title">Carro na Mão</h1>
+        <p class="page-header__desc">
+          App Android em Flutter para controle de veículos — abastecimentos, manutenções,
+          despesas recorrentes e lembretes. V1.0.0 em produção, distribuído direto aos
+          usuários via GitHub Releases com APK assinado por pipeline próprio no GitHub Actions.
+        </p>
+        <div class="btn-group" style="margin-top:1.5rem;">
+          <a href="https://github.com/lucasengecomp/carr0-na-mao" class="btn btn--outline btn--sm" target="_blank">Repositório →</a>
+          <a href="https://github.com/lucasengecomp/carr0-na-mao/releases/tag/v1.0.0" class="btn btn--outline btn--sm" target="_blank">Download v1.0.0 →</a>
+          <a href="/carro-na-mao/privacidade/" class="btn btn--outline btn--sm">Política de privacidade</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Overview -->
+        <div style="margin-bottom:3rem;" class="animate-on-scroll">
+          <h2 style="font-size:1.1rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);font-weight:700;margin-bottom:1rem;">Contexto</h2>
+          <p style="font-size:1rem;line-height:1.75;color:var(--text-secondary);">
+            Três pessoas próximas queriam acompanhar o custo real dos próprios carros — abastecimentos, consumo médio,
+            manutenções e lembretes de revisão. Não havia necessidade de nuvem, multi-usuário no mesmo device nem
+            sincronização entre pessoas; cada um é dono do seu próprio dado. O desafio foi construir um app estável,
+            bonito e distribuível sem passar por lojas de aplicativo nesta fase inicial.
+          </p>
+        </div>
+
+        <!-- Stack & Decisões -->
+        <div style="margin-bottom:3rem;" class="animate-on-scroll">
+          <h2 style="font-size:1.1rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);font-weight:700;margin-bottom:1rem;">Stack &amp; decisões técnicas</h2>
+          <ul style="font-size:1rem;line-height:1.75;color:var(--text-secondary);padding-left:1.25rem;">
+            <li><strong>Flutter + Dart</strong> para um codebase único que serve Android hoje e habilita web (iOS via PWA) amanhã.</li>
+            <li><strong>Drift (SQLite tipado)</strong> para persistência local — zero backend na V1, dados sempre disponíveis offline.</li>
+            <li><strong>Riverpod</strong> como camada de estado, com providers reativos acoplados ao Drift.</li>
+            <li><strong>go_router</strong> para navegação declarativa, preparada para deep links futuros.</li>
+            <li><strong>flutter_local_notifications</strong> para lembretes de manutenção, com agendamento <em>inexato</em> (Doze-mode friendly) pra evitar o <code>SecurityException: SCHEDULE_EXACT_ALARM</code> do Android 12+.</li>
+            <li><strong>fl_chart</strong> para o dashboard de consumo e gastos, com paleta adaptada a dark mode.</li>
+            <li><strong>+840 testes</strong> (unitários, de widget e de DAO) rodando no CI a cada PR.</li>
+          </ul>
+        </div>
+
+        <!-- Pipeline de release -->
+        <div style="margin-bottom:3rem;" class="animate-on-scroll">
+          <h2 style="font-size:1.1rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);font-weight:700;margin-bottom:1rem;">Pipeline de release</h2>
+          <p style="font-size:1rem;line-height:1.75;color:var(--text-secondary);margin-bottom:1rem;">
+            A V1 foi distribuída sem Google Play (decisão de produto baseada em custo e cadência). O fluxo ficou:
+          </p>
+          <ol style="font-size:1rem;line-height:1.75;color:var(--text-secondary);padding-left:1.25rem;">
+            <li><code>git tag v1.0.0 &amp;&amp; git push origin v1.0.0</code></li>
+            <li>GitHub Actions decodifica o keystore de um secret em base64, gera <code>key.properties</code> no runner, builda <code>flutter build apk --release</code>.</li>
+            <li>APK assinado é anexado a um draft release com instruções de instalação embutidas (vindas de <code>docs/release/instalar-apk.md</code>) e changelog auto-gerado.</li>
+            <li>Após revisão manual, o release é publicado e o link é compartilhado diretamente com os usuários.</li>
+            <li>Updates futuros preservam dados nos devices porque a assinatura é estável — mesmo keystore, APK por APK.</li>
+          </ol>
+          <p style="font-size:1rem;line-height:1.75;color:var(--text-secondary);margin-top:1rem;">
+            Keystore, senhas e <code>key.properties</code> nunca entram no repositório; o workflow só referencia nomes
+            de secrets. A assinatura foi validada byte-a-byte comparando <code>apksigner verify --print-certs</code>
+            entre o build local e o build do CI.
+          </p>
+        </div>
+
+        <!-- Arquitetura V2 -->
+        <div style="margin-bottom:3rem;" class="animate-on-scroll">
+          <h2 style="font-size:1.1rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);font-weight:700;margin-bottom:1rem;">Arquitetura planejada para a V2</h2>
+          <p style="font-size:1rem;line-height:1.75;color:var(--text-secondary);">
+            Um dos três usuários é iOS. Em vez de pagar a taxa anual de Apple Developer nesta fase de validação, a V2
+            atende esse usuário via <strong>Flutter Web deployado no Vercel</strong> com persistência em
+            <strong>Supabase</strong> (Postgres + magic link + RLS por <code>user_id</code>). Os usuários Android continuam
+            no Drift local. Como não há sincronização entre as duas realidades (por design do produto), a arquitetura é
+            desacoplada por uma camada <code>Repository</code> com duas implementações, selecionadas por
+            <code>kIsWeb</code> no composition root.
+          </p>
+        </div>
+
+        <!-- Lessons learned -->
+        <div style="margin-bottom:3rem;" class="animate-on-scroll">
+          <h2 style="font-size:1.1rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);font-weight:700;margin-bottom:1rem;">O que ficou de aprendizado</h2>
+          <ul style="font-size:1rem;line-height:1.75;color:var(--text-secondary);padding-left:1.25rem;">
+            <li><strong>Devices reais importam.</strong> O bug crítico do <code>SCHEDULE_EXACT_ALARM</code> só apareceu num Galaxy S22 com Android 16 — testes e analyze passavam limpos. CI não substitui device físico.</li>
+            <li><strong>Major bumps antes de release têm custo.</strong> Subir <code>fl_chart 0.70 → 1.3</code> e <code>cupertino_icons 1 → 2</code> entrou em PR próprio, validado em device, antes do primeiro release — e não bundled com o release.</li>
+            <li><strong>Keystore é ativo crítico</strong>. Perdê-lo quebra a continuidade de updates nos devices dos usuários. Fora do repo, backup externo, senhas em gerenciador.</li>
+            <li><strong>Instruções de instalação são parte do produto.</strong> O texto de <code>docs/release/instalar-apk.md</code> é copiado automaticamente para o corpo de cada release — os usuários não precisam ler documentação separada.</li>
+          </ul>
+        </div>
+
+        <!-- Tags -->
+        <div class="tags animate-on-scroll" style="margin-bottom:2rem;">
+          <span class="tag">Flutter</span>
+          <span class="tag">Dart</span>
+          <span class="tag">Drift</span>
+          <span class="tag">Riverpod</span>
+          <span class="tag">go_router</span>
+          <span class="tag">Android</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Open Source</span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Lucas Castro · <a href="/focolares/">Focolares</a> · <a href="/carro-na-mao/">Carro na Mão</a></p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>
